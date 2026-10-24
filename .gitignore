@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vercel/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+ASTRA_STATUS.md
+ASTRA_DONE.md
