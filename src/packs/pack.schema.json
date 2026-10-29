@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApplyReady rule pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "version", "id", "name", "portal", "cycle", "applicationPath", "freshRenewal", "availability", "reviewedOn", "reviewedAt", "reviewAfter", "cycleStatus", "coverage", "limitations", "manualChecks", "sources", "imageConstraints"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "id": { "$ref": "#/definitions/id" },
+    "name": { "$ref": "#/definitions/text" },
+    "portal": { "$ref": "#/definitions/text" },
+    "cycle": { "$ref": "#/definitions/text" },
+    "applicationPath": { "$ref": "#/definitions/text" },
+    "freshRenewal": { "enum": ["fresh", "renewal", "both", "unknown"] },
+    "availability": { "enum": ["verified-limited", "unverified", "unavailable"] },
+    "reviewedOn": { "$ref": "#/definitions/text" },
+    "reviewedAt": { "$ref": "#/definitions/date" },
+    "reviewAfter": { "$ref": "#/definitions/date" },
+    "cycleStatus": { "enum": ["published", "archived"] },
+    "coverage": { "$ref": "#/definitions/text" },
+    "limitations": { "$ref": "#/definitions/texts" },
+    "manualChecks": { "$ref": "#/definitions/texts" },
+    "sources": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "publisher", "title", "url", "section", "reviewedOn", "verification", "note"], "properties": {
+      "id": { "$ref": "#/definitions/id" }, "publisher": { "$ref": "#/definitions/text" }, "title": { "$ref": "#/definitions/text" }, "url": { "type": "string", "pattern": "^https://" }, "section": { "$ref": "#/definitions/text" }, "reviewedOn": { "$ref": "#/definitions/text" }, "verification": { "enum": ["verified", "partial", "unverified"] }, "note": { "$ref": "#/definitions/text" }
+    } } },
+    "imageConstraints": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "label", "outputMime", "sourceId", "limitation"], "properties": {
+      "id": { "$ref": "#/definitions/id" }, "label": { "$ref": "#/definitions/text" }, "outputMime": { "const": "image/jpeg" }, "maxBytes": { "type": "integer", "minimum": 1, "maximum": 20971520 }, "minBytes": { "type": "integer", "minimum": 1, "maximum": 20971520 }, "maxWidth": { "type": "integer", "minimum": 1, "maximum": 8192 }, "maxHeight": { "type": "integer", "minimum": 1, "maximum": 8192 }, "sourceId": { "$ref": "#/definitions/id" }, "limitation": { "$ref": "#/definitions/text" }
+    } } }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "text": { "type": "string", "minLength": 1 },
+    "texts": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/text" } },
+    "date": { "type": "string", "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$" }
+  }
+}

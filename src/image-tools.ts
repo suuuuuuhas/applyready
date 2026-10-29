@@ -64,6 +64,7 @@ export async function inspectImageFile(file: File): Promise<ImageInspection> {
     throw new Error('The image header does not match its file format; it cannot be decoded as the declared image type.')
   }
   const image = await loadImage(file)
+  if (image.naturalWidth > 8192 || image.naturalHeight > 8192 || image.naturalWidth * image.naturalHeight > 40_000_000) throw new Error('Use an image up to 8192px per side and 40 megapixels.')
   return { name: file.name, mime: file.type, bytes: file.size, width: image.naturalWidth, height: image.naturalHeight }
 }
 
@@ -124,7 +125,7 @@ function renderCanvas(image: HTMLImageElement, options: ImageProcessOptions) {
 }
 
 export async function processImageFile(file: File, options: ImageProcessOptions): Promise<ProcessedImage> {
-  validateImageFile(file)
+  await inspectImageFile(file)
   const image = await loadImage(file)
   const rendered = renderCanvas(image, options)
   const ceiling = options.qualityCeiling ?? 0.94

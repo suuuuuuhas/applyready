@@ -1,25 +1,30 @@
 {
   "name": "applyready-feesafe-mvp",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "test": "tsx --test src/engine.test.ts src/image-tools.test.ts src/feesafe.test.ts",
-    "preview": "vite preview"
+    "build": "npm run validate:packs && tsc -b && vite build",
+    "test": "tsx --test src/*.test.ts",
+    "preview": "vite preview",
+    "validate:packs": "node scripts/validate-packs.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
+    "jszip": "3.10.1",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@types/node": "latest",
+    "ajv": "8.20.0",
     "tsx": "latest"
   }
 }

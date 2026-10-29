@@ -7,3 +7,6 @@ dist/
 !.env.example
 ASTRA_STATUS.md
 ASTRA_DONE.md
+test-results/
+playwright-report/
+docs/screenshots/frames/

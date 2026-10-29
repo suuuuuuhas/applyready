@@ -1,0 +1,26 @@
+{
+  "id": "recruitment-image-unavailable",
+  "name": "Recruitment photo/signature · source not selected",
+  "portal": "Named recruitment portal not selected",
+  "cycle": "Not set",
+  "applicationPath": "Photo/signature requirements",
+  "freshRenewal": "unknown",
+  "availability": "unavailable",
+  "reviewedOn": "24 October 2026",
+  "coverage": "Unavailable until one named recruitment portal and current specification are reviewed.",
+  "limitations": [
+    "No recruitment image rule is enabled. The local image tool can still demonstrate mechanics without representing portal compliance."
+  ],
+  "sources": [],
+  "imageConstraints": [],
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "reviewedAt": "2026-10-24",
+  "reviewAfter": "2026-11-24",
+  "cycleStatus": "archived",
+  "manualChecks": [
+    "Check that you selected the exact application cycle and upload field.",
+    "Review sharpness, framing, orientation and readability yourself.",
+    "Confirm the live portal instructions before submitting. Passing file checks does not guarantee acceptance."
+  ]
+}

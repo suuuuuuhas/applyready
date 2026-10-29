@@ -1,0 +1,56 @@
+{
+  "id": "tg-eapcet-images-2026",
+  "name": "TG EAPCET · photograph and signature",
+  "portal": "TG EAPCET",
+  "cycle": "2026 intake",
+  "applicationPath": "2026 online application · manual photo/signature upload when prompted",
+  "freshRenewal": "unknown",
+  "availability": "verified-limited",
+  "reviewedOn": "24 October 2026",
+  "coverage": "Entered-name/DOB consistency and separate JPEG photograph/signature byte checks.",
+  "limitations": [
+    "This pack covers the 2026 application guide, not the 2027 cycle or admission eligibility.",
+    "Some qualifying-examination records supply images automatically. Upload only when the official form prompts you.",
+    "The guide does not specify universal pixel dimensions. Photo content, signature authenticity, and portal acceptance are not checked."
+  ],
+  "sources": [
+    {
+      "id": "tg-eapcet-guide-2026",
+      "publisher": "JNTUH / TGCHE",
+      "title": "TG EAPCET 2026 online application user guide",
+      "url": "https://eapcet.tgche.ac.in/TGEAPCET/Doc2026/USER%20GUIDE%20FOR%20TG%20EAPCET%20-%202026.pdf",
+      "section": "Photograph and Signature, pages 34–35",
+      "reviewedOn": "24 October 2026",
+      "verification": "verified",
+      "note": "The guide specifies JPG photograph below 50 KB and JPG signature below 30 KB for applicants asked to upload them. No minimum byte size is stated."
+    }
+  ],
+  "imageConstraints": [
+    {
+      "id": "eapcet-photo",
+      "label": "TG EAPCET photograph · below 50 KB",
+      "outputMime": "image/jpeg",
+      "maxBytes": 51199,
+      "sourceId": "tg-eapcet-guide-2026",
+      "limitation": "Strictly below 50 KB. Pixel dimensions are a user-selected setting, not an official requirement."
+    },
+    {
+      "id": "eapcet-signature",
+      "label": "TG EAPCET signature · below 30 KB",
+      "outputMime": "image/jpeg",
+      "maxBytes": 30719,
+      "sourceId": "tg-eapcet-guide-2026",
+      "limitation": "Strictly below 30 KB. Check signature legibility yourself."
+    }
+  ],
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "reviewedAt": "2026-10-24",
+  "reviewAfter": "2026-11-24",
+  "cycleStatus": "archived",
+  "manualChecks": [
+    "Check that you selected the exact application cycle and upload field.",
+    "Review sharpness, framing, orientation and readability yourself.",
+    "Confirm the live portal instructions before submitting. Passing file checks does not guarantee acceptance."
+  ]
+}

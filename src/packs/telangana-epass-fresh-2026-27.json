@@ -1,0 +1,78 @@
+{
+  "id": "telangana-epass-fresh-2026-27",
+  "name": "Telangana ePASS · fresh registration",
+  "portal": "Telangana ePASS",
+  "cycle": "2026–27",
+  "applicationPath": "Post-matric scholarship · fresh registration · general case",
+  "freshRenewal": "fresh",
+  "availability": "verified-limited",
+  "reviewedOn": "24 October 2026",
+  "coverage": "Name and DOB comparison, income-certificate date, declared document status, and the published ePASS photo-size constraint.",
+  "limitations": [
+    "This is not complete portal coverage. Renewal, course, caste, disability, domicile, and institution-specific conditions are not enabled.",
+    "The bank-account exception is surfaced as a conditional review, not inferred as a universal pass.",
+    "The source page does not establish document authenticity, identity, eligibility, sanction, or approval."
+  ],
+  "sources": [
+    {
+      "id": "epass-prerequisites",
+      "publisher": "Telangana ePASS",
+      "title": "Official scholarship portal and fresh-registration prerequisites",
+      "url": "https://telanganaepass.cgg.gov.in/FreshRegistration202627.do",
+      "section": "Post Matric Scholarship Fresh Registration / eligibility and required documents",
+      "reviewedOn": "24 October 2026",
+      "verification": "verified",
+      "note": "The current official portal page lists a 2026–27 fresh-registration path, an income certificate obtained after 01-04-2025, and an EBC bank-account exception. The selected pack intentionally stores only those supported conditions."
+    },
+    {
+      "id": "epass-upload-limits",
+      "publisher": "Telangana ePASS",
+      "title": "Required-document upload fields",
+      "url": "https://telanganaepass.cgg.gov.in/FreshRegistration202627.do?studentAction=GetForm",
+      "section": "Fresh registration document upload fields",
+      "reviewedOn": "24 October 2026",
+      "verification": "partial",
+      "note": "The current form labels the passport photograph as JPG only with a maximum size of 30 KB, and the bank-passbook first page as JPG only with a maximum of 100 KB. It does not define a universal pixel dimension or a full image-authenticity rule."
+    },
+    {
+      "id": "epass-renewal-attendance",
+      "publisher": "Telangana ePASS",
+      "title": "Renewal guidance requires a current source check",
+      "url": "https://telanganaepass.cgg.gov.in/",
+      "section": "Eligibility navigation; linked legacy page unavailable at review",
+      "reviewedOn": "24 October 2026",
+      "verification": "unverified",
+      "note": "The portal links a legacy eligibility page that returned HTTP 404 during release review. No current attendance threshold is asserted here. Confirm department- and cycle-specific renewal conditions through the official portal."
+    },
+    {
+      "id": "epass-status-service",
+      "publisher": "Telangana ePASS",
+      "title": "Application Status service",
+      "url": "https://telanganaepass.cgg.gov.in/epassonlinelinks.jsp",
+      "section": "Application Status navigation",
+      "reviewedOn": "24 October 2026",
+      "verification": "partial",
+      "note": "The portal exposes an Application Status service, but its exact internal status vocabulary is not asserted here. FeeSafe status labels are student-entered editorial categories that require confirmation against the portal."
+    }
+  ],
+  "imageConstraints": [
+    {
+      "id": "epass-photo-max-30kb",
+      "label": "ePASS photo · maximum 30 KB",
+      "outputMime": "image/jpeg",
+      "maxBytes": 30720,
+      "sourceId": "epass-upload-limits",
+      "limitation": "Only the byte limit is source-backed here. No universal pixel dimensions or authenticity check is claimed."
+    }
+  ],
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "reviewedAt": "2026-10-24",
+  "reviewAfter": "2026-11-24",
+  "cycleStatus": "published",
+  "manualChecks": [
+    "Check that you selected the exact application cycle and upload field.",
+    "Review sharpness, framing, orientation and readability yourself.",
+    "Confirm the live portal instructions before submitting. Passing file checks does not guarantee acceptance."
+  ]
+}

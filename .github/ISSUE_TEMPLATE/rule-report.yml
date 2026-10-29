@@ -1,0 +1,31 @@
+name: Public rule discrepancy
+description: Report changed or conflicting upload requirements without student data.
+body:
+  - type: markdown
+    attributes:
+      value: "This is a public issue. Do not attach student images, names, application numbers, certificates or unredacted portal errors. Cite the public official requirement instead."
+  - type: input
+    id: pack
+    attributes:
+      label: Rule pack, cycle and version
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Upload field / rule ID
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public official source URL and page / section
+    validations:
+      required: true
+  - type: textarea
+    id: discrepancy
+    attributes:
+      label: What differs in the public requirements?
+      description: Include exact units and comparison boundaries. No private portal data.
+    validations:
+      required: true

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "reviewedAt": "2026-10-29",
+  "reviewAfter": "2026-11-29",
+  "reviewedOn": "29 October 2026",
+  "freshRenewal": "unknown",
+  "availability": "verified-limited",
+  "cycleStatus": "archived",
+  "coverage": "Scanned photograph and signature format and byte-range checks only.",
+  "limitations": [
+    "2026 specifications only. Do not apply these limits to 2027.",
+    "Live camera capture is a separate official workflow and cannot be replaced by this image tool.",
+    "No eligibility, document authenticity, face detection or portal acceptance assessment."
+  ],
+  "manualChecks": [
+    "Use your own recent photograph, with the required white background and face visibility; check the bulletin for all content conditions.",
+    "Inspect your signature for clarity and correct orientation.",
+    "Complete any required live-photo capture on the official portal."
+  ],
+  "id": "cuet-ug-images-2026",
+  "name": "CUET UG · photograph and signature",
+  "portal": "CUET UG",
+  "cycle": "2026",
+  "applicationPath": "2026 application · scanned photograph/signature only",
+  "sources": [
+    {
+      "id": "cuet-ug-images-2026-bulletin",
+      "publisher": "National Testing Agency",
+      "title": "CUET UG 2026 official information bulletin",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3d1a21da7bca4abff8b0b61b87597de73/uploads/2026/01/202601031633478370.pdf",
+      "section": "Page 10, Upload Scanned/JPG/JPEG Images, photograph and signature",
+      "reviewedOn": "29 October 2026",
+      "verification": "verified",
+      "note": "Photograph JPG/JPEG 10–200 KB; signature JPG/JPEG 10–50 KB. No universal pixel dimensions specified."
+    }
+  ],
+  "imageConstraints": [
+    {
+      "id": "cuet-ug-images-2026-photo",
+      "label": "CUET UG photograph · 10–200 KB",
+      "outputMime": "image/jpeg",
+      "minBytes": 10240,
+      "maxBytes": 204800,
+      "sourceId": "cuet-ug-images-2026-bulletin",
+      "limitation": "Format and byte range only. Review photo content and separate live-capture instructions."
+    },
+    {
+      "id": "cuet-ug-images-2026-signature",
+      "label": "CUET UG signature · 10–50 KB",
+      "outputMime": "image/jpeg",
+      "minBytes": 10240,
+      "maxBytes": 51200,
+      "sourceId": "cuet-ug-images-2026-bulletin",
+      "limitation": "Format and byte range only. Clarity and authenticity require your review."
+    }
+  ]
+}
