@@ -400,4 +400,3 @@ function FeeSafePanel({ open, onToggle, statusId, onStatusChange, student, onStu
 }
 
 function EmptyState({ title, text }: { title: string; text: string }) { return <div className="empty-state"><span className="empty-mark">—</span><h3>{title}</h3><p>{text}</p></div> }
-
