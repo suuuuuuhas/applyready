@@ -1,0 +1,9 @@
+{
+  "files": 100,
+  "fixture": "100 synthetic 500x350 seeded-noise PNGs, identical pixel content, distinct names",
+  "inputBytes": 52557800,
+  "cpuThrottle": 4,
+  "inspectedMs": 18904,
+  "correctedMs": 136789,
+  "note": "Synthetic CPU-throttled browser test, not a real low-end-PC or student pilot."
+}
